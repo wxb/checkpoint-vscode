@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the "checkpoint" extension will be documented in this file.
+All notable changes to the "checkpointX" extension will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -33,20 +33,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.0] - 2026-03-25
 
 ### Added
-- 🌲 **树形视图面板**: 在资源管理器侧边栏新增 Checkpoint 树形视图，直观展示所有检查点
+- 🌲 **独立侧边栏**: 在左侧活动栏新增 CheckpointX 独立面板，不再依附于资源管理器
 - 🔍 **快速跳转**: 点击树形视图中的检查点可直接跳转到对应代码位置
 - 🗑️ **清空所有**: 新增清空所有检查点功能
 - 🔄 **刷新功能**: 新增刷新按钮，手动同步检查点数据
 - 📍 **行号显示**: 树形视图中显示检查点所在文件和行号
 - 💬 **悬停提示**: 树形视图中悬停显示检查点详细信息
+- 📊 **活动栏图标**: 独立的活动栏图标，快速访问检查点列表
+- 👤 **作者识别优化**: 优先使用 Git user.name，不存在时使用 user.email 前缀
 
 ### Changed
 - 🎨 优化命令图标，使用 VS Code 内置图标
 - 📂 检查点按分支分组展示，支持展开/折叠
 - ⚡ 改进树形视图的性能和响应速度
+- 🏷️ 插件名称从 `checkpoint` 更名为 `checkpointX`
+- 🔧 配置项命名空间从 `checkpoint` 改为 `checkpointX`
 
 ### Technical
 - 新增 `CheckpointTreeProvider` 树形数据提供器
 - 实现 `TreeDataProvider` 接口支持 VS Code 树形视图
+- 添加 `viewsContainers` 定义独立活动栏容器
 - 添加 `activationEvents` 支持视图激活
-- 新增配置项 `checkpoint.showInExplorer` 控制侧边栏显示
+- 新增配置项 `checkpointX.showInExplorer` 控制侧边栏显示
+- 优化 Git 作者信息获取逻辑
+
+## [3.0.0] - 2026-03-25
+
+### Changed
+- 🏷️ **全面重命名**: 所有代码和文档中的 `checkpoint` 已全面更名为 `checkpointX`
+- 📦 **版本升级**: 版本号升级至 3.0.0，标志插件进入稳定阶段
+- 📝 **文档统一**: README、CHANGELOG 等文档统一使用新名称
+
+### Technical
+- 统一代码中的命令前缀为 `checkpointX`
+- 统一配置项命名空间为 `checkpointX`
+- 统一视图 ID 为 `checkpointXTree`
+- 确保所有文件引用一致性

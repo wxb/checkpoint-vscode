@@ -2,7 +2,7 @@
   "name": "checkpointX",
   "displayName": "CheckpointX - 代码检查点管理",
   "description": "在代码开发中实时记录需要上线前检查的事项，支持分支分类和团队协作",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "publisher": "wangxb",
   "author": {
     "name": "wangxb",
